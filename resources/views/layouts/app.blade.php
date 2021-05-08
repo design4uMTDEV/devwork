@@ -12,8 +12,10 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
         @livewireStyles
+
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
@@ -21,13 +23,13 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="bg--light">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class="bg--blue-light shadow border-b">
+                    <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
@@ -42,5 +44,28 @@
         @stack('modals')
 
         @livewireScripts
+
+        <footer>
+            <div class="footer-wr">
+                <div class="footer-section footer-right">
+                    <h3 class="footer-title">Userfull links</h3>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                </div>
+                <div class="footer-section footer-middle">
+                    <h3 class="footer-title">Userfull links</h3>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                </div>
+                <div class="footer-section footer-left">
+                    <h3 class="footer-title">Userfull links</h3>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

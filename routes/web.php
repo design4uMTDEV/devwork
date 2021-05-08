@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CommentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +18,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
+// Articles
+
+Route::resource('article', ArticleController::class);
+
+Route::get('/blog', [ArticleController::class, 'index'])->name('blog');
+
+Route::get('/blog/{article}', [ArticleController::class, 'show'])->name('article_show');
+
+Route::get('/article/create', [ArticleController::class, 'create'])->name('article_create')->middleware('auth');
+
+Route::post('/article/save', [ArticleController::class, 'save'])->name('article_save');
+
+Route::post('/article/destroy', [ArticleController::class, 'destroy'])->name('article_destroy');
+
+Route::resource('comment', CommentController::class);
+
+// Books
+
+Route::get('/books', [BookController::class, 'index'])->name('books');
+

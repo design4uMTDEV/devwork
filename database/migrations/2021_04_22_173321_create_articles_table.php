@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             // $table->string('slug', 50);
             $table->string('excerpt', 100);
             $table->string('body');
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('category_id');
             
             $table->timestamps();
