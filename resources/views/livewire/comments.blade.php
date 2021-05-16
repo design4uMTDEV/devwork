@@ -5,7 +5,7 @@
     @auth
     <div class="mt-4">
         <x-jet-label for="text" value="Write a comment" />
-        <x-jet-input id="text" class="block mt-1 w-full" type="text" wire:model="text" :value="old('text')" autofocus required/>
+        <x-jet-input id="text" class="block mt-1 w-full" type="text" wire:model="text" :value="old('text')" autofocus/>
     </div>
     <x-jet-button  wire:click="save" class="my-4">
         {{ __('Create comment') }}

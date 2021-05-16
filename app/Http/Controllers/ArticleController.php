@@ -18,6 +18,8 @@ class ArticleController extends Controller
          ));
     }
 
+    
+
     public function show(Article $article) {
 
         $tags = $article->tags;
@@ -51,11 +53,26 @@ class ArticleController extends Controller
         ));
     }
 
-    
-
     public function update(Article $article) {
+
+        $data = request()->validate([
+         
+            'title' => ['string', 'max:60'],
+            'excerpt' => '',
+            'body' => ['string'],
+            
+        ]);
+
+
+        $article->update($data);
+
+        // Flash feedback messages
+        session()->flash('message', 'Article updated.');
         
+        return redirect(route('article.show', $article));
     }
+
+
 
     public function destroy(Article $article) {
         

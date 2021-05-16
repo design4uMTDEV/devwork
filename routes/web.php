@@ -34,6 +34,8 @@ Route::get('/article/create', [ArticleController::class, 'create'])->name('artic
 
 Route::post('/article/save', [ArticleController::class, 'save'])->name('article_save');
 
+Route::patch('/blog/{article}/update', [ArticleController::class, 'update'])->name('article_update');
+
 Route::post('/article/destroy', [ArticleController::class, 'destroy'])->name('article_destroy');
 
 Route::resource('comment', CommentController::class);

@@ -12,7 +12,7 @@ $maxWidth = [
 ][$maxWidth ?? '2xl'];
 @endphp
 
-<div
+<div style="margin:150px 0 0 0;"
     x-data="{
         show: @entangle($attributes->wire('model')).defer,
         focusables() {

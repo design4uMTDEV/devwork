@@ -18,7 +18,17 @@
                     <a href="/blog/{{$article->id}}" class="article_title">
                         {{ $article->title }}
                     </a>
-                    <div class="article-date">Created on {{ date('jS M Y'), strtotime($article->created_at) }}</div>
+                    <div class="article_user">
+                        <div class="image-wr">
+                            <img src="{{ $article->user->profile_photo_url }}" class="sm--prof-img" alt="$article->title">
+                        </div>
+                        <small class="article_user-name" >
+                            {{ $article->user()->pluck('username')[0] }}
+                        </small>
+                        <div class="dot">&nbsp;&bull;</div>
+                        <small class="article-date">Created on {{ date('jS M Y'), strtotime($article->created_at) }}</small>
+
+                    </div>
                     <p class="article_excerpt">
                     {{ $article->excerpt }}
                     </p>

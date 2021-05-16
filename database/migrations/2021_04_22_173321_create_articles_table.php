@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string('title', 50);
             // $table->string('slug', 50);
             $table->string('excerpt', 100);
-            $table->string('body');
+            $table->string('body', 1000000);
             $table->string('image')->nullable();
             $table->unsignedBigInteger('category_id');
             

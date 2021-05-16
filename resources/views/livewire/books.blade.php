@@ -33,22 +33,22 @@ function booksearch() {
 
                 if(image != ""){
                                         
-                    results.innerHTML += "<div class='bg-white overflow-hidden shadow-xl flex sm:rounded-lg p-10 mb-10'>"
+                    results.innerHTML += "<div class='bg-white overflow-hidden book-wr shadow-xl flex sm:rounded-lg p-10 mb-10'>"
                                         +"<img src='" + image + "'>"
                                         +"<div class='book-content'>"
                                         +"<h2>"  + data.items[i].volumeInfo.title + "</h2>"  
                                         + "<small><b>"  + data.items[i].volumeInfo.publishedDate + "</b></small><br>" 
                                         + "<small><b>E-book:</b> "  + data.items[i].saleInfo.isEbook + "</small><br>" 
-                                        + "<a href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
+                                        + "<a class='available_at' href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
                                         + "<a href='" + link + "'><div class='book-more'>See more</div></a>" 
                                         +"</div></div>";
                 } else {
-                    results.innerHTML += "<div class='bg-white overflow-hidden shadow-xl flex sm:rounded-lg p-10 mb-10'>"
+                    results.innerHTML += "<div class='bg-white overflow-hidden book-wr shadow-xl flex sm:rounded-lg p-10 mb-10'>"
                                 +"<div class='book-content'>"
                                         +"<h2>"  + data.items[i].volumeInfo.title + "</h2>"  
                                         + "<small><b>"  + data.items[i].volumeInfo.publishedDate + "</b></small><br>" 
                                         + "<small><b>E-book:</b> "  + data.items[i].saleInfo.isEbook + "</small><br>" 
-                                        + "<a href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
+                                        + "<a class='available_at' href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
                                         + "<a href='" + link + "'><div class='book-more'>See more</div></a>" 
                                         +"</div></div>";
                 }
@@ -82,22 +82,22 @@ window.onload = function booksearch1() {
 
                 if(image != ""){
                                         
-                    results.innerHTML += "<div class='bg-white overflow-hidden shadow-xl flex sm:rounded-lg p-10 mb-10'>"
+                    results.innerHTML += "<div class='bg-white overflow-hidden book-wr shadow-xl flex sm:rounded-lg p-10 mb-10'>"
                                         +"<img src='" + image + "'>"
                                         +"<div class='book-content'>"
                                         +"<h2>"  + data.items[i].volumeInfo.title + "</h2>"  
                                         + "<small><b>"  + data.items[i].volumeInfo.publishedDate + "</b></small><br>" 
                                         + "<small><b>E-book:</b> "  + data.items[i].saleInfo.isEbook + "</small><br>" 
-                                        + "<a href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
+                                        + "<a class='available_at' href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
                                         + "<a href='" + link + "'><div class='book-more'>See more</div></a>" 
                                         +"</div></div>";
                 } else {
-                    results.innerHTML += "<div class='bg-white overflow-hidden shadow-xl flex sm:rounded-lg p-10 mb-10'>"
+                    results.innerHTML += "<div class='bg-white overflow-hidden book-wr shadow-xl flex sm:rounded-lg p-10 mb-10'>"
                                +"<div class='book-content'>"
                                         +"<h2>"  + data.items[i].volumeInfo.title + "</h2>"  
                                         + "<small><b>"  + data.items[i].volumeInfo.publishedDate + "</b></small><br>" 
                                         + "<small><b>E-book:</b> "  + data.items[i].saleInfo.isEbook + "</small><br>" 
-                                        + "<a href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
+                                        + "<a class='available_at' href='" + link + "'><small><b>Available at: </b>" + link + "</small></a>" 
                                         + "<a href='" + link + "'><div class='book-more'>See more</div></a>" 
                                         +"</div></div>";
                 }

@@ -12,7 +12,7 @@ class SearchArticles extends Component
     public function render()
     {
 
-        $articles = Article::where('title', 'LIKE', '%'.$this->search.'%')->paginate(9);
+        $articles = Article::where('title', 'LIKE', '%'.$this->search.'%')->paginate(4);
         return view('livewire.search-articles', compact('articles'));
     }
 }

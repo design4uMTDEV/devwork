@@ -1,8 +1,8 @@
 <nav x-data="{ open: false }" class="border-b border-gray-100 main-nav">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 nav-out-wr">
+        <div class="flex justify-between h-16 nav-in-wr">
+            <div style="width:100%" class="flex justify-between max-w-7xl">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('home') }}">
@@ -187,6 +187,9 @@
             <x-jet-responsive-nav-link class="text-white" href="{{ route('blog') }}" :active="request()->routeIs('blog')">
                 Blog
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link class="text-white" href="{{ route('books') }}" :active="request()->routeIs('books')">
+                Books
+            </x-jet-responsive-nav-link>
             @guest
                 <x-jet-responsive-nav-link class="text-white" href="{{  route('login')  }}" :active="request()->routeIs('login')">
                     {{ __('Login') }}
@@ -209,20 +212,20 @@
                     @endif
 
                     <div>
-                        <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                        <div class="font-medium text-base color--light">{{ Auth::user()->name }}</div>
+                        <div class="font-medium text-sm color--blue-normal">{{ Auth::user()->email }}</div>
                     </div>
                 </div>
             
             
                 <div class="mt-3 space-y-1">
                     <!-- Account Management -->
-                    <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                    <x-jet-responsive-nav-link class="color--light" href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                         {{ __('Profile') }}
                     </x-jet-responsive-nav-link>
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                        <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
+                        <x-jet-responsive-nav-link class="color--light" href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
                             {{ __('API Tokens') }}
                         </x-jet-responsive-nav-link>
                     @endif
@@ -231,7 +234,7 @@
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
-                        <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                        <x-jet-responsive-nav-link class="color--light" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         this.closest('form').submit();">
                             {{ __('Logout') }}

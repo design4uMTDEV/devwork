@@ -20,7 +20,7 @@
             <x-jet-input id="excerpt" class="block mt-1 w-full" type="text" wire:model="excerpt" :value="old('excerpt')" required/>
         </div>
         
-        <div>
+        <div class="mt-4">
             <x-jet-label for="body" value="Body" />                
             <textarea  id="body" class="block mt-1 w-full" type="text" wire:model="body" :value="old('body')" required rows="4" cols="50"></textarea>
         </div>
@@ -46,7 +46,7 @@
         
         </div>
 
-        <x-jet-button  wire:click="save" class="ml-4">
+        <x-jet-button  wire:click="save" class="ml-4 mt-4">
             {{ __('Create') }}
         </x-jet-button>
         <div>

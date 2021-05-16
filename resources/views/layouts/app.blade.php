@@ -13,6 +13,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="{{asset('logo.png')}}"/>
 
         @livewireStyles
 
@@ -48,22 +49,23 @@
         <footer>
             <div class="footer-wr">
                 <div class="footer-section footer-right">
-                    <h3 class="footer-title">Userfull links</h3>
+                    <!-- <h3 class="footer-title">Userfull links</h3>
                     <a href="" class="footer-item">Link item</a>
                     <a href="" class="footer-item">Link item</a>
-                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a> -->
                 </div>
                 <div class="footer-section footer-middle">
-                    <h3 class="footer-title">Userfull links</h3>
+                    <!-- <h3 class="footer-title">Userfull links</h3>
                     <a href="" class="footer-item">Link item</a>
                     <a href="" class="footer-item">Link item</a>
-                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a> -->
+                    <small>&copy 2021 • Developed by Marios Tsouras</small>
                 </div>
                 <div class="footer-section footer-left">
-                    <h3 class="footer-title">Userfull links</h3>
+                    <!-- <h3 class="footer-title">Userfull links</h3>
                     <a href="" class="footer-item">Link item</a>
                     <a href="" class="footer-item">Link item</a>
-                    <a href="" class="footer-item">Link item</a>
+                    <a href="" class="footer-item">Link item</a> -->
                 </div>
             </div>
         </footer>
