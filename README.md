@@ -1,6 +1,6 @@
 # Devwork
 
-Platform for the developer community.
+Devwork is a blog for the developer community. This application developed by the use of Laravel 8 combined with Jetstream, Livewire and Tailwind CSS.
 
 ## Description
 
